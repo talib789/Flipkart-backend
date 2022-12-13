@@ -19,14 +19,14 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use("/",Router);
 
-const PORT=8000;
+const port=process.env.PORT || 8000;
 
 const USERNAME=process.env.DB_USERNAME;
 const PASSWORD=process.env.DB_PASSWORD;
 
 Connection(USERNAME,PASSWORD);
 
-app.listen(PORT,()=>console.log(`server running at PORT: ${PORT}`));
+app.listen(port,()=>console.log(`server running at PORT: ${port}`));
 
 DefaultData();
 
