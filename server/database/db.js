@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const Connection=async(USERNAME,PASSWORD)=>{
 
-    const url=`mongodb://localhost:27017/flipkart-clone`;
+    const url=`mongodb+srv://${USERNAME}:${PASSWORD}@e-commerce-web.ed0pazi.mongodb.net/?retryWrites=true&w=majority`;
 
     try {
         await mongoose.connect(url,{useUnifiedTopology:true});
