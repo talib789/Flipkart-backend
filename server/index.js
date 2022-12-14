@@ -17,6 +17,10 @@ app.use(bodyParser.json({extended:true}));
 
 app.use(bodyParser.urlencoded({extended:true}));
 
+app.get('/',(req,res)=>{
+res.send("welcome talib bro")    
+})
+
 app.use("/",Router);
 
 const port=process.env.PORT || 8000;
